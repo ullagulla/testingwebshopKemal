@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 
 const { app, port } = require('./src/server')
-const dbConfig = process.env.MONGO_ATLAS_URL || require('./config/config').databaseUrl
+const dbConfig = process.env.MONGO_ATLAS_URL 
 
 
 // Kicka igång servern
