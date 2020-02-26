@@ -19,12 +19,16 @@ const VIEW = {
     main: 'main'
 }
 
-app.use(sassMiddleware({ // tell sassMiddleware where src file and dest directory is
-    src: 'sass',
-    dest: 'public',
-    // debug: true, // för att skriva ut data till konsollen
-    outputStyle: 'compressed'
-}))
+if (process.env.NODE_ENV == 'development') {
+    const sassMiddleware = require('node-sass-middleware')
+    app.use(sassMiddleware({ // tell sassMiddleware where src file and dest directory is
+        src: 'sass',
+        dest: 'public',
+        // debug: true, // för att skriva ut data till konsollen
+        outputStyle: 'compressed'
+    }))
+}
+
 // define a static folder, 'public'
 app.use(express.static('public'))
 // 
