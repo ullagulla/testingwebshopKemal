@@ -6,8 +6,9 @@
   "scripts": {
     "test": "mocha",
     "devstart": "nodemon index.js",
+    "start": "node dist/index.js",
     "sass": "node-sass --watch sass -o public",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./test,./sass"
+    "build": "webpack"
   },
   "keywords": [
     "webshop",
