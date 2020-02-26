@@ -2,11 +2,10 @@
   "name": "wshop19feb",
   "version": "0.0.1",
   "description": "A simple webshop",
-  "main": "index.js",
   "scripts": {
     "test": "mocha",
     "devstart": "nodemon index.js",
-    "start": "node dist/index.js",
+    "start": "node dist/bundle.js",
     "sass": "node-sass --watch sass -o public",
     "build": "webpack"
   },
