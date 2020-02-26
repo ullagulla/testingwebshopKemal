@@ -2,12 +2,12 @@
 const mongoose = require('mongoose')
 
 const { app, port } = require('./src/server')
-const dbConfig = require('./config/config')
+const dbConfig = require('./config/config').databaseURL
 
 
 // Kicka igång servern
 const dbOptions = { useUnifiedTopology: true, useNewUrlParser: true }
-mongoose.connect(dbConfig.databaseURL, dbOptions).then(() => {
+mongoose.connect(dbConfig, dbOptions).then(() => {
     app.listen(port, () => console.log(`App listening on port ${port}!`))
 })
 
