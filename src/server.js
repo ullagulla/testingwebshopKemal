@@ -3,7 +3,7 @@
 const express = require('express')
 const sassMiddleware = require('node-sass-middleware')
 const app = express()
-const port = 8080
+const port = process.env.PORT || 8080
 const productItem = require('../model/product')
 
 const ROUTE = {
