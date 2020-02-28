@@ -19,6 +19,8 @@ const VIEW = {
     main: 'main'
 }
 
+//hej och hå
+
 if (process.env.NODE_ENV == 'development') {
     const sassMiddleware = require('node-sass-middleware')
     app.use(sassMiddleware({ // tell sassMiddleware where src file and dest directory is
